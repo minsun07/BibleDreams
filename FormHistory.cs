@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace BibleDreams
 {
-    public partial class Form1 : Form
+    public partial class FormHistory : Form
     {
-        public Form1()
+        public FormHistory()
         {
             InitializeComponent();
-        }
-
-        private void 끝내기ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }
