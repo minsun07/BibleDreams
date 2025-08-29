@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.userData = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comRepetition = new System.Windows.Forms.ComboBox();
             this.btnSend = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbRecentIssue = new System.Windows.Forms.TextBox();
+            this.tbEmotionState = new System.Windows.Forms.TextBox();
+            this.tbDreamContent = new System.Windows.Forms.TextBox();
             this.recentIssues = new System.Windows.Forms.Label();
             this.repeatOrNot = new System.Windows.Forms.Label();
             this.userEmotion = new System.Windows.Forms.Label();
             this.userStroy = new System.Windows.Forms.Label();
             this.drResult = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tbResult = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.파일ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.기록보기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,11 +53,11 @@
             // 
             // userData
             // 
-            this.userData.Controls.Add(this.comboBox1);
+            this.userData.Controls.Add(this.comRepetition);
             this.userData.Controls.Add(this.btnSend);
-            this.userData.Controls.Add(this.textBox4);
-            this.userData.Controls.Add(this.textBox2);
-            this.userData.Controls.Add(this.textBox1);
+            this.userData.Controls.Add(this.tbRecentIssue);
+            this.userData.Controls.Add(this.tbEmotionState);
+            this.userData.Controls.Add(this.tbDreamContent);
             this.userData.Controls.Add(this.recentIssues);
             this.userData.Controls.Add(this.repeatOrNot);
             this.userData.Controls.Add(this.userEmotion);
@@ -69,17 +69,17 @@
             this.userData.TabStop = false;
             this.userData.Text = "사용자 꿈 입력";
             // 
-            // comboBox1
+            // comRepetition
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comRepetition.FormattingEnabled = true;
+            this.comRepetition.Items.AddRange(new object[] {
             "반복 x",
             "2~4회",
             "5회 이상"});
-            this.comboBox1.Location = new System.Drawing.Point(21, 248);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 20);
-            this.comboBox1.TabIndex = 9;
+            this.comRepetition.Location = new System.Drawing.Point(21, 248);
+            this.comRepetition.Name = "comRepetition";
+            this.comRepetition.Size = new System.Drawing.Size(121, 20);
+            this.comRepetition.TabIndex = 9;
             // 
             // btnSend
             // 
@@ -89,28 +89,29 @@
             this.btnSend.TabIndex = 8;
             this.btnSend.Text = "결과 보기";
             this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
-            // textBox4
+            // tbRecentIssue
             // 
-            this.textBox4.Location = new System.Drawing.Point(21, 306);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(305, 21);
-            this.textBox4.TabIndex = 7;
+            this.tbRecentIssue.Location = new System.Drawing.Point(21, 306);
+            this.tbRecentIssue.Name = "tbRecentIssue";
+            this.tbRecentIssue.Size = new System.Drawing.Size(305, 21);
+            this.tbRecentIssue.TabIndex = 7;
             // 
-            // textBox2
+            // tbEmotionState
             // 
-            this.textBox2.Location = new System.Drawing.Point(21, 187);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(305, 21);
-            this.textBox2.TabIndex = 5;
+            this.tbEmotionState.Location = new System.Drawing.Point(21, 187);
+            this.tbEmotionState.Name = "tbEmotionState";
+            this.tbEmotionState.Size = new System.Drawing.Size(305, 21);
+            this.tbEmotionState.TabIndex = 5;
             // 
-            // textBox1
+            // tbDreamContent
             // 
-            this.textBox1.Location = new System.Drawing.Point(21, 38);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(307, 118);
-            this.textBox1.TabIndex = 4;
+            this.tbDreamContent.Location = new System.Drawing.Point(21, 38);
+            this.tbDreamContent.Multiline = true;
+            this.tbDreamContent.Name = "tbDreamContent";
+            this.tbDreamContent.Size = new System.Drawing.Size(307, 118);
+            this.tbDreamContent.TabIndex = 4;
             // 
             // recentIssues
             // 
@@ -150,7 +151,7 @@
             // 
             // drResult
             // 
-            this.drResult.Controls.Add(this.textBox5);
+            this.drResult.Controls.Add(this.tbResult);
             this.drResult.Location = new System.Drawing.Point(383, 34);
             this.drResult.Name = "drResult";
             this.drResult.Size = new System.Drawing.Size(398, 396);
@@ -158,14 +159,14 @@
             this.drResult.TabStop = false;
             this.drResult.Text = "최근 주요 이슈";
             // 
-            // textBox5
+            // tbResult
             // 
-            this.textBox5.Location = new System.Drawing.Point(24, 24);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(352, 355);
-            this.textBox5.TabIndex = 0;
+            this.tbResult.Location = new System.Drawing.Point(24, 24);
+            this.tbResult.Multiline = true;
+            this.tbResult.Name = "tbResult";
+            this.tbResult.ReadOnly = true;
+            this.tbResult.Size = new System.Drawing.Size(352, 355);
+            this.tbResult.TabIndex = 0;
             // 
             // menuStrip1
             // 
@@ -197,7 +198,7 @@
             // 끝내기ToolStripMenuItem
             // 
             this.끝내기ToolStripMenuItem.Name = "끝내기ToolStripMenuItem";
-            this.끝내기ToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.끝내기ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.끝내기ToolStripMenuItem.Text = "끝내기";
             this.끝내기ToolStripMenuItem.Click += new System.EventHandler(this.끝내기ToolStripMenuItem_Click);
             // 
@@ -249,12 +250,12 @@
         private System.Windows.Forms.Label repeatOrNot;
         private System.Windows.Forms.Label userEmotion;
         private System.Windows.Forms.Label userStroy;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbDreamContent;
+        private System.Windows.Forms.TextBox tbEmotionState;
+        private System.Windows.Forms.TextBox tbRecentIssue;
         private System.Windows.Forms.Button btnSend;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox tbResult;
+        private System.Windows.Forms.ComboBox comRepetition;
         private System.Windows.Forms.ToolStripMenuItem 기록보기ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 끝내기ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 정보ToolStripMenuItem;
