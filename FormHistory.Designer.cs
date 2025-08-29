@@ -40,6 +40,7 @@
             this.btnSend.TabIndex = 0;
             this.btnSend.Text = "내역 불러오기";
             this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // lbHistory
             // 

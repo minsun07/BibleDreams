@@ -62,7 +62,7 @@ namespace BibleDreams
             }
             else
             {
-                form = new FormHistory(); // this 써줘야함.
+                form = new FormHistory(this);
                 form.Show();
             }
         }
