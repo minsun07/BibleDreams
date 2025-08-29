@@ -190,8 +190,9 @@
             // 기록보기ToolStripMenuItem
             // 
             this.기록보기ToolStripMenuItem.Name = "기록보기ToolStripMenuItem";
-            this.기록보기ToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.기록보기ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.기록보기ToolStripMenuItem.Text = "기록 보기";
+            this.기록보기ToolStripMenuItem.Click += new System.EventHandler(this.기록보기ToolStripMenuItem_Click);
             // 
             // 끝내기ToolStripMenuItem
             // 
