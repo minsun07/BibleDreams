@@ -21,5 +21,11 @@ namespace BibleDreams
         {
             Application.Exit();
         }
+
+        private void 정보ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAbout form = new FormAbout();
+            form.ShowDialog();
+        }
     }
 }
