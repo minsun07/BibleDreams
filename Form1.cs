@@ -104,5 +104,23 @@ namespace BibleDreams
                 MessageBox.Show($"알 수 없는 오류가 발생했습니다.\n{ex.Message}", "알 수 없는 오류");
             }
         }
+
+        internal void LoadHistroy(string history)
+        {
+            string dreamContent = history.Split('|')[0];
+            tbDreamContent.Text = dreamContent;
+            string emotionState = history.Split('|')[1].Split('|')[0];
+            tbEmotionState.Text = emotionState;
+            string repetition = history.Split('|')[2].Split('|')[0].Split('|')[0];
+            comRepetition.SelectedItem = repetition;
+            string recentIssue = history.Split('|')[3].Split('|')[0].Split('|')[0].Split('|')[0];
+            tbRecentIssue.Text = recentIssue;
+            string result = history.Split('|')[4].Split('|')[0].Split('|')[0].Split('|')[0].Split('|')[0];
+            tbResult.Text = "꿈의 주요 내용: " + dreamContent + " " + Environment.NewLine +
+                "꿈의 감정 상태: " + emotionState + " " + Environment.NewLine +
+                "반복 여부: " + repetition + " " + Environment.NewLine +
+                "최근 주요 이슈: " + recentIssue + " " + Environment.NewLine +
+                "꿈 해몽: " + result;
+        }
     }
 }

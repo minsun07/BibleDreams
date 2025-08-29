@@ -56,5 +56,11 @@ namespace BibleDreams
         {
             UpdateHistory();
         }
+
+        private void lbHistory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string message = history[lbHistory.SelectedIndex];
+            form1.LoadHistroy(message);
+        }
     }
 }

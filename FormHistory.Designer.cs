@@ -56,6 +56,7 @@
             this.lbHistory.Name = "lbHistory";
             this.lbHistory.Size = new System.Drawing.Size(341, 328);
             this.lbHistory.TabIndex = 1;
+            this.lbHistory.SelectedIndexChanged += new System.EventHandler(this.lbHistory_SelectedIndexChanged);
             // 
             // FormHistory
             // 
